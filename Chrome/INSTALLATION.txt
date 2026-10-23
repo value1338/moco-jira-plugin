@@ -1,8 +1,0 @@
-MOCO Jira Connector 3.0.0
-Publisher: alpenblickdrei
-
-Open chrome://extensions, enable Developer mode, Load unpacked and select this folder.
-Setup: open a Jira ticket, click the extension icon, enter your own MOCO connection.
-Disable the original MOCO extension while testing to avoid duplicate buttons.
-Docs: https://github.com/value1338/moco-jira-plugin
-Store review and installed-Chrome acceptance remain pending.

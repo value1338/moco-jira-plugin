@@ -4,7 +4,7 @@
 
 MOCO-Zeiterfassung direkt am Jira-Ticket – mit der richtigen Leistung auch beim **ersten** Start. Ein unabhängiger Fork von [MOCO Zeiterfassung](https://github.com/everii-Group/mocoapp-browser-extension), herausgegeben von [alpenblickdrei](https://www.alpenblickdrei.com/).
 
-**Stand: 3.0.0 Veröffentlichungskandidat.** Der fertige Chrome-Build ist hier verfügbar; eine Chrome-Web-Store-Freigabe oder ein abgeschlossener Test mit echten Buchungen wird damit nicht behauptet. Ein abschließender installierter Chrome-Test und die Store-Prüfung stehen noch aus.
+**Stand: 3.0.1 Veröffentlichungskandidat.** Der fertige Chrome-Build ist hier verfügbar; eine Chrome-Web-Store-Freigabe oder ein abgeschlossener Test mit echten Buchungen wird damit nicht behauptet. Ein abschließender installierter Chrome-Test und die Store-Prüfung stehen noch aus.
 
 ## Was macht dieser Fork anders?
 
@@ -45,6 +45,14 @@ Es wird nur eine Leistung ausgewählt, die genau zum erkannten Projekt gehört u
 
 Die Verbindung lässt sich über „Einstellungen“ im Zeitdialog ändern oder trennen. Falls ein Overlay nicht möglich ist, öffnet sich eine eigene Erweiterungsseite; du musst nicht durch Chromes Einstellungsmenüs navigieren. Eine Verbindung pro Chrome-Profil; jede Person verwendet ihren eigenen MOCO-Schlüssel.
 
+## Das AB3-Auge
+
+- **Gelb:** mit MOCO verbunden, kein laufender Timer gemeldet.
+- **Rot mit Aufnahmepunkt:** MOCO meldet einen laufenden Timer. Im Zeitdialog siehst du, worauf er läuft.
+- **Grau:** nicht eingerichtet, getrennt oder MOCO gerade nicht erreichbar.
+
+Das eigene AB3-Auge ersetzt das MOCO-Logo. Farbe, Aufnahmepunkt und Beschriftung machen den Status erkennbar. Auf sichtbaren Jira-Tabs wird der Status alle 30 Sekunden sowie beim Zurückkehren aktualisiert; Änderungen in anderen Fenstern können daher kurz verzögert erscheinen. Die Statusabfrage liest nur und startet oder stoppt keinen Timer.
+
 ## Grenzen und Fehlerfälle
 
 - Automatik ist für Jira Cloud mit `parent`-Hierarchie und numerischem Zuordnungsfeld implementiert. Jira Server/Data Center, alte Epic-Link-Sonderfelder und mehrere parallele Agency-Verbindungen sind nicht zugesichert.
@@ -57,7 +65,7 @@ Die Verbindung lässt sich über „Einstellungen“ im Zeitdialog ändern oder 
 
 ## Dateien und Sicherheit
 
-Dieses Repository enthält das fertige installierbare Plugin (`Chrome/` und `moco-jira-connector-3.0.0.zip`) sowie Anleitung, Datenschutz und Lizenz. Tests, Testdaten, Entwicklungsdateien und interne Prüfprotokolle werden hier nicht veröffentlicht. Der JavaScript-Code der Erweiterung ist im ausgelieferten Bundle enthalten. Das Plugin-ZIP enthält keine Tests oder Zugangsdaten.
+Dieses Repository enthält das fertige installierbare Plugin (`Chrome/` und `moco-jira-connector-3.0.1.zip`) sowie Anleitung, Datenschutz und Lizenz. Tests, Testdaten, Entwicklungsdateien und interne Prüfprotokolle werden hier nicht veröffentlicht. Der JavaScript-Code der Erweiterung ist im ausgelieferten Bundle enthalten. Das Plugin-ZIP enthält keine Tests oder Zugangsdaten.
 
 Manifest V3, lokal gebündelter Code, kein Remote-Code. Der persönliche MOCO-Schlüssel wird erst bei der Einrichtung im eigenen Browser eingegeben. Sicherheitsprüfungen können bekannte Probleme finden, aber keine vollständige Schwachstellenfreiheit garantieren. Bitte keine Schlüssel oder Kundendaten in Issues posten. [Sicher melden](SECURITY.md).
 

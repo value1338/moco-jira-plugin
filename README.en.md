@@ -4,7 +4,7 @@
 
 Track MOCO time from a Jira ticket, with the correct service selected **before the first booking**. An independent fork of [MOCO Zeiterfassung](https://github.com/everii-Group/mocoapp-browser-extension), published by [alpenblickdrei](https://www.alpenblickdrei.com/).
 
-**Status: 3.0.0 release candidate.** The available installable build does not imply Chrome Web Store approval or completed live time-tracking validation. An installed-Chrome acceptance test and Store review remain open.
+**Status: 3.0.1 release candidate.** The available installable build does not imply Chrome Web Store approval or completed live time-tracking validation. An installed-Chrome acceptance test and Store review remain open.
 
 ## Why this fork?
 
@@ -45,6 +45,14 @@ The mapped service must belong to the mapped project and appear in the authentic
 
 Use “Einstellungen” in the time dialog to edit/disconnect the connection. If the overlay is unavailable, setup opens as its own extension page. One agency connection per Chrome profile; each person uses their own key. UI currently uses German labels.
 
+## The AB3 eye
+
+- **Yellow:** connected to MOCO; no running timer reported.
+- **Red with a recording dot:** MOCO reports a running timer. The time dialog shows what it is tracking.
+- **Grey:** not configured, disconnected, or MOCO currently unreachable.
+
+Our own AB3 eye replaces the MOCO logo. Color, a recording dot and labels communicate its state. Visible Jira tabs refresh every 30 seconds and when returning to the tab; changes in other windows can appear with a short delay. Status reads never start or stop a timer.
+
 ## Limitations and recovery
 
 - Implemented for Jira Cloud's `parent` hierarchy and a numeric mapping field. Jira Server/Data Center, legacy Epic Link fields and multiple simultaneous agency connections are not guaranteed.
@@ -57,7 +65,7 @@ Use “Einstellungen” in the time dialog to edit/disconnect the connection. If
 
 ## Distribution and security
 
-This repository contains the ready-to-install extension (`Chrome/` and `moco-jira-connector-3.0.0.zip`), documentation, privacy policy and license. Tests, fixtures, development files and internal verification logs are not published here. The extension JavaScript is included in the shipped bundles. The plugin ZIP contains no tests or credentials.
+This repository contains the ready-to-install extension (`Chrome/` and `moco-jira-connector-3.0.1.zip`), documentation, privacy policy and license. Tests, fixtures, development files and internal verification logs are not published here. The extension JavaScript is included in the shipped bundles. The plugin ZIP contains no tests or credentials.
 
 Manifest V3, locally bundled code, no remotely executed code. Users enter their own personal MOCO key during setup in their own browser. Security checks find known issues; they cannot guarantee vulnerability-free software. Never post personal keys or customer data in public issues. [Report vulnerabilities privately](SECURITY.md).
 
