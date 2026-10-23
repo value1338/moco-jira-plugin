@@ -45,6 +45,20 @@ The mapped service must belong to the mapped project and appear in the authentic
 
 Use “Einstellungen” in the time dialog to edit/disconnect the connection. If the overlay is unavailable, setup opens as its own extension page. One agency connection per Chrome profile; each person uses their own key. UI currently uses German labels.
 
+## MOCO booking access and employee onboarding
+
+A Jira assignment and valid MOCO IDs are not enough: the owner of the personal MOCO key must be assigned and active for time tracking on the MOCO project. The project and service must also be bookable. This applies to ad hoc work received through Jira as well. The extension does not create staff assignments or expand permissions.
+
+MOCO already provides standard tools for this. Distinguish these two cases:
+
+- **New project, existing employees:** MOCO **Settings → Projects** can add all people when creating a project. Each agency must check this setting; the extension does not enable it.
+- **New employee, existing projects:** Under **Staff → Person → Projects → +**, assign selected or all existing projects for time tracking. Do not assume the new-project default retroactively adds a new employee to old projects. Include this check in onboarding.
+- **One-off task:** Have the employee added for time tracking on the relevant MOCO project. Then close and reopen the Jira time dialog to reload the personal project catalog. Entries still use the mapped service and retain the Jira ticket reference.
+
+If the extension reports that the Jira project is not uniquely bookable despite correct IDs, check the personal project assignment, active services and the MOCO user whose key is configured. Manual selection cannot make an unavailable MOCO project bookable either. The extension never silently selects a different project.
+
+[MOCO: People and teams for time tracking](https://www.mocoapp.com/en/features/17-projects/content/22-projects-general-information) · [MOCO: Missing projects in time tracking](https://intercom.help/mocoapp/de/articles/6704447-zeiterfassung)
+
 ## The AB3 eye
 
 - **Yellow:** connected to MOCO; no running timer reported.

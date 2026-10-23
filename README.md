@@ -45,6 +45,20 @@ Es wird nur eine Leistung ausgewählt, die genau zum erkannten Projekt gehört u
 
 Die Verbindung lässt sich über „Einstellungen“ im Zeitdialog ändern oder trennen. Falls ein Overlay nicht möglich ist, öffnet sich eine eigene Erweiterungsseite; du musst nicht durch Chromes Einstellungsmenüs navigieren. Eine Verbindung pro Chrome-Profil; jede Person verwendet ihren eigenen MOCO-Schlüssel.
 
+## MOCO-Buchungsfreigabe und neue Mitarbeiter
+
+Eine Jira-Zuweisung und eine korrekte MOCO-ID allein reichen nicht: Der Benutzer des persönlichen MOCO-Schlüssels muss im MOCO-Projekt für die Zeiterfassung eingetragen und aktiv sein. Auch Projekt und Leistung müssen buchbar sein. Das gilt ebenso für kurzfristige Sonderaufgaben aus Jira. Die Erweiterung legt keine Personen-Zuordnungen an und erweitert keine Rechte.
+
+MOCO bietet dafür bereits Standardfunktionen. Dabei sind zwei Fälle zu unterscheiden:
+
+- **Neues Projekt, vorhandene Mitarbeiter:** Unter MOCO **Einstellungen → Projekte** lässt sich festlegen, dass alle Personen bei der Projekterstellung hinzugefügt werden. Diese Voreinstellung muss die Agentur prüfen; sie wird vom Plugin nicht aktiviert.
+- **Neuer Mitarbeiter, vorhandene Projekte:** Unter **Personal → Person → Projekte → +** können bestimmte oder alle bestehenden Projekte für die Zeiterfassung zugewiesen werden. Nicht davon ausgehen, dass die Einstellung für neue Projekte neue Mitarbeiter rückwirkend allen alten Projekten hinzufügt. Die Zuweisung gehört in die Onboarding-Prüfung.
+- **Einzelne spontane Aufgabe:** Die Person zum betreffenden MOCO-Projekt für die Zeiterfassung hinzufügen lassen. Danach den Zeitdialog in Jira schließen und erneut öffnen, damit das Plugin den persönlichen Projektkatalog neu lädt. Die Zeit wird weiterhin auf die erkannte Leistung mit Jira-Ticketbezug gebucht.
+
+Erscheint trotz korrekter Jira-IDs „Das Jira-Projekt ist in MOCO nicht eindeutig buchbar“, zuerst die persönliche Projektfreigabe, aktive Leistungen und den verwendeten MOCO-Benutzer prüfen. Die manuelle Auswahl kann ein von MOCO nicht freigegebenes Projekt ebenfalls nicht buchbar machen. Es wird nicht automatisch auf ein anderes Projekt ausgewichen.
+
+[MOCO: Personen und Teams für die Zeiterfassung](https://www.mocoapp.com/funktionen/17-projekte/inhalt/22-projekte-allgemeines) · [MOCO: Warum sehe ich das Projekt nicht in der Zeiterfassung?](https://intercom.help/mocoapp/de/articles/6704447-zeiterfassung)
+
 ## Das AB3-Auge
 
 - **Gelb:** mit MOCO verbunden, kein laufender Timer gemeldet.
