@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.0.2 — 2026-10-26
+
+- Separate page roots, CSS classes and click handling from the original MOCO extension so neither eye or time dialog replaces the other.
+- Position the AB3 eye above a visible original eye; keep bottom-right placement when used alone.
+- Read timer status immediately when a Jira page loads, retaining the existing visible-tab refreshes.
+- Preserve existing configuration, permissions and explicit booking controls.
+- Clarify private publisher details and DE/EN instructions for parallel comparison.
+
 ## 3.0.1 candidate — 2026-10-23
 
 - Original AB3 eye: yellow ready, red with recording dot while tracking, grey disconnected/unreachable.

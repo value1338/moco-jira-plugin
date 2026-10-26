@@ -2,9 +2,9 @@
 
 [English](README.en.md) · [Datenschutz / Privacy](PRIVACY.md) · [Sicherheit](SECURITY.md)
 
-MOCO-Zeiterfassung direkt am Jira-Ticket – mit der richtigen Leistung auch beim **ersten** Start. Ein unabhängiger Fork von [MOCO Zeiterfassung](https://github.com/everii-Group/mocoapp-browser-extension), herausgegeben von [alpenblickdrei](https://www.alpenblickdrei.com/).
+MOCO-Zeiterfassung direkt am Jira-Ticket – mit der richtigen Leistung auch beim **ersten** Start. Ein unabhängiger Fork von [MOCO Zeiterfassung](https://github.com/everii-Group/mocoapp-browser-extension), bereitgestellt von Riccardo Reichle.
 
-**Stand: 3.0.1 Veröffentlichungskandidat.** Der fertige Chrome-Build ist hier verfügbar; eine Chrome-Web-Store-Freigabe oder ein abgeschlossener Test mit echten Buchungen wird damit nicht behauptet. Ein abschließender installierter Chrome-Test und die Store-Prüfung stehen noch aus.
+**Stand: 3.0.2.** Korrigiert das schwebende Auge und den Zeitdialog beim parallelen Einsatz mit der Original-Erweiterung. Die jeweils von Google freigegebene Version findest du im [Chrome Web Store](https://chromewebstore.google.com/detail/dddmgcfghhfpdhlfmclijiaenbjcolch).
 
 ## Was macht dieser Fork anders?
 
@@ -38,7 +38,7 @@ Es wird nur eine Leistung ausgewählt, die genau zum erkannten Projekt gehört u
 ## Einrichten
 
 1. MOCO-Zugang mit persönlichem API-Schlüssel und Buchungsrechten sowie einen angemeldeten Jira-Cloud-Zugang bereithalten. Das Zuordnungsfeld muss bereits existieren und korrekt befüllt sein.
-2. Das Plugin-ZIP herunterladen und entpacken, `chrome://extensions` öffnen, Entwicklermodus aktivieren und den enthaltenen Ordner mit `manifest.json` als entpackte Erweiterung laden. Im GitHub-Repository liegt derselbe Stand im Ordner `Chrome`. Die ursprüngliche MOCO-Erweiterung während des Tests deaktivieren, um doppelte Buttons zu vermeiden.
+2. Das Plugin-ZIP herunterladen und entpacken, `chrome://extensions` öffnen, Entwicklermodus aktivieren und den enthaltenen Ordner mit `manifest.json` als entpackte Erweiterung laden. Im GitHub-Repository liegt derselbe Stand im Ordner `Chrome`. Die Original-Erweiterung kann für einen Vergleich installiert bleiben: Unser Auge und Zeitdialog sind getrennt. Zum Buchen jeweils eine der beiden Steuerungen verwenden.
 3. Ein Jira-Ticket öffnen und das Erweiterungssymbol anklicken. Die Einrichtung erscheint im Overlay. Adresse wird aus dem aktuellen Tab übernommen; bei genau einem numerischen Feld mit „MOCO“ im Namen wird auch dessen Feld-ID übernommen. Bei mehreren Feldern bitte auswählen, sonst die Feld-ID aus der Jira-Administration eintragen.
 4. MOCO-Subdomain und **eigenen** MOCO-API-Schlüssel eingeben (Profil → Integrationen). Änderungen prüfen und speichern. Chrome fragt die beiden konkreten Domains ab. Es wird kein Jira-API-Schlüssel benötigt.
 5. Bei schon geöffneten Tabs gegebenenfalls Jira neu laden. Task öffnen, Kunde/Projekt/Leistung im Dialog prüfen, dann ausdrücklich die Stoppuhr starten oder eine Dauer speichern.
@@ -65,7 +65,7 @@ Erscheint trotz korrekter Jira-IDs „Das Jira-Projekt ist in MOCO nicht eindeut
 - **Rot mit Aufnahmepunkt:** MOCO meldet einen laufenden Timer. Im Zeitdialog siehst du, worauf er läuft.
 - **Grau:** nicht eingerichtet, getrennt oder MOCO gerade nicht erreichbar.
 
-Das eigene AB3-Auge ersetzt das MOCO-Logo. Farbe, Aufnahmepunkt und Beschriftung machen den Status erkennbar. Auf sichtbaren Jira-Tabs wird der Status alle 30 Sekunden sowie beim Zurückkehren aktualisiert; Änderungen in anderen Fenstern können daher kurz verzögert erscheinen. Die Statusabfrage liest nur und startet oder stoppt keinen Timer.
+Das AB3-Auge gehört zu diesem Fork. Ist das Original-Auge ebenfalls sichtbar, steht unser Auge darüber; ansonsten unten rechts. Beide Zeitdialoge bleiben getrennt. Farbe, Aufnahmepunkt und Beschriftung machen den Status erkennbar. Auf sichtbaren Jira-Tabs wird der Status direkt beim Laden, alle 30 Sekunden sowie beim Zurückkehren aktualisiert; Änderungen in anderen Fenstern können daher kurz verzögert erscheinen. Die Statusabfrage liest nur und startet oder stoppt keinen Timer.
 
 ## Grenzen und Fehlerfälle
 
@@ -79,7 +79,7 @@ Das eigene AB3-Auge ersetzt das MOCO-Logo. Farbe, Aufnahmepunkt und Beschriftung
 
 ## Dateien und Sicherheit
 
-Dieses Repository enthält das fertige installierbare Plugin (`Chrome/` und `moco-jira-connector-3.0.1.zip`) sowie Anleitung, Datenschutz und Lizenz. Tests, Testdaten, Entwicklungsdateien und interne Prüfprotokolle werden hier nicht veröffentlicht. Der JavaScript-Code der Erweiterung ist im ausgelieferten Bundle enthalten. Das Plugin-ZIP enthält keine Tests oder Zugangsdaten.
+Dieses Repository enthält das fertige installierbare Plugin (`Chrome/` und `moco-jira-connector-3.0.2.zip`) sowie Anleitung, Datenschutz und Lizenz. Tests, Testdaten, Entwicklungsdateien und interne Prüfprotokolle werden hier nicht veröffentlicht. Der JavaScript-Code der Erweiterung ist im ausgelieferten Bundle enthalten. Das Plugin-ZIP enthält keine Tests oder Zugangsdaten.
 
 Manifest V3, lokal gebündelter Code, kein Remote-Code. Der persönliche MOCO-Schlüssel wird erst bei der Einrichtung im eigenen Browser eingegeben. Sicherheitsprüfungen können bekannte Probleme finden, aber keine vollständige Schwachstellenfreiheit garantieren. Bitte keine Schlüssel oder Kundendaten in Issues posten. [Sicher melden](SECURITY.md).
 

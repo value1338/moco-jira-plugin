@@ -1,10 +1,10 @@
 # Datenschutz / Privacy — MOCO Jira Connector
 
-Stand / Updated: 23 October 2026. Version: 3.0.x.
+Stand / Updated: 26 October 2026. Version: 3.0.x.
 
 ## Deutsch
 
-Herausgeber: **Alpenblickdrei Werbeagentur GmbH**, Lindauer Str. 2, 88069 Tettnang, Deutschland. Kontakt: **servus@alpenblickdrei.com**. [Impressum](https://www.alpenblickdrei.com/impressum/).
+Herausgeber: **Riccardo Reichle**. Kontakt: **riccardo@alpenblickdrei.com**.
 
 Die Erweiterung verbindet den Jira-Ticketkontext mit der persönlichen MOCO-Zeiterfassung. Der Herausgeber betreibt dafür keinen Datenserver, sammelt keine Nutzungsstatistiken und erhält keine API-Schlüssel oder Ticketdaten.
 
@@ -14,7 +14,7 @@ Die Erweiterung verbindet den Jira-Ticketkontext mit der persönlichen MOCO-Zeit
 
 **MOCO:** Der persönliche Schlüssel wird nur an die eingerichtete HTTPS-MOCO-Subdomain gesendet. Die Erweiterung meldet sich über die Schnittstelle des ursprünglichen MOCO-Plugins an und liest persönliche buchbare Projekte/Leistungen, Zeiteinträge der angezeigten Woche, Planung/Sollzeiten, Anzeigevorgaben und laufenden Timer. Beim Öffnen kann die Sitzung auch den aktuellen Jira-Schlüssel an MOCO übermitteln, um dessen bestehende Buchungen zu ermitteln. Eine ausdrückliche Start-/Speicheraktion übermittelt Projekt, Leistung, Datum, Dauer bzw. Timerstart, Verrechenbarkeit, Beschreibung und Jira-Ticketbezug. Stoppen wird nur nach einem ausdrücklichen Klick angefordert. Inhalte verbleiben in euren eigenen MOCO-/Jira-Systemen und unterliegen deren Bedingungen und euren betrieblichen Regeln.
 
-Auf sichtbaren Jira-Tabs wird der Timerstatus alle 30 Sekunden und bei der Rückkehr zum Tab erneut bei MOCO gelesen. Dabei kann der aktuelle Ticketschlüssel zur Ermittlung seiner gebuchten Zeit an MOCO gesendet werden. Diese Abfragen ändern keine Zeiten.
+Auf sichtbaren Jira-Tabs wird der Timerstatus direkt beim Laden, alle 30 Sekunden und bei der Rückkehr zum Tab bei MOCO gelesen. Dabei kann der aktuelle Ticketschlüssel zur Ermittlung seiner gebuchten Zeit an MOCO gesendet werden. Diese Abfragen ändern keine Zeiten.
 
 **Berechtigungen:** `storage` für lokale Konfiguration, `activeTab` für die Einrichtung im bewusst angeklickten Tab und `scripting` für den Jira-Button/das Overlay. Die optionale HTTPS-Deklaration erlaubt kundeneigene Jira-Domains; beim Speichern werden nur die zwei angezeigten konkreten Domains angefordert. Keine Werbung, kein Verkauf von Daten, kein Remote-Code, keine Telemetrie. Externe Anleitung-/Support-Links werden nur durch Nutzerklick geöffnet.
 
@@ -22,7 +22,7 @@ Auf sichtbaren Jira-Tabs wird der Timerstatus alle 30 Sekunden und bei der Rück
 
 ## English
 
-Publisher: **Alpenblickdrei Werbeagentur GmbH**, Lindauer Str. 2, 88069 Tettnang, Germany. Contact: **servus@alpenblickdrei.com**. [Legal notice](https://www.alpenblickdrei.com/impressum/).
+Publisher: **Riccardo Reichle**. Contact: **riccardo@alpenblickdrei.com**.
 
 The extension connects Jira ticket context to personal MOCO time tracking. The publisher operates no data backend for it, collects no usage analytics, and receives no API keys or ticket data.
 
@@ -32,7 +32,7 @@ The extension connects Jira ticket context to personal MOCO time tracking. The p
 
 **MOCO:** The key is sent only to the configured HTTPS MOCO subdomain. The extension uses upstream's browser-extension interface to authenticate and read personal bookable projects/services, displayed-week time entries, schedules/target hours, display preferences and running timer. Opening a dialog may send the current Jira key to MOCO to retrieve previous bookings for that issue. An explicit start/save action sends project, service, date, duration or timer start, billable flag, description and Jira ticket reference. Stopping also requires a user click. Data resides in your own MOCO/Jira systems under their terms and your organization's rules.
 
-Visible Jira tabs refresh the timer status from MOCO every 30 seconds and when returning to the tab. These reads may send the current issue key to MOCO to retrieve its booked time; they do not change time entries.
+Visible Jira tabs refresh the timer status from MOCO immediately on load, every 30 seconds and when returning to the tab. These reads may send the current issue key to MOCO to retrieve its booked time; they do not change time entries.
 
 **Permissions:** `storage` saves local settings; `activeTab` supports setup in the deliberately clicked tab; `scripting` adds the Jira control and extension-origin overlay. Optional HTTPS patterns support custom Jira domains, but Save requests only the two concrete displayed origins. No advertisements, sale of data, remote code or telemetry. Documentation/support links open only on user clicks.
 
